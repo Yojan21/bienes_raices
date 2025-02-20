@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as mx;
+
+
+.boton_amarillo{
+    @include mx.boton(v.$amarillo, inline-block);
+}
+
+.boton_amarillo-block{
+    @include mx.boton(v.$amarillo, block);
+}
+
+.boton_verde{
+    @include mx.boton(v.$verde, inline-block)
+}
+
+.boton_rojo_block{
+    @include mx.boton(v.$rojo, block);
+    width: 100%;
+}
+
+.boton_amarillo_block{
+    @include mx.boton(v.$amarillo, block);
+}

@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as mx;
+@use "sass:color";
+
+.footer{
+    background-color: v.$grisOscuro;
+    padding: 2rem 0 2rem 0;
+    margin-bottom: 0;
+
+    .contenedor_footer{
+        padding-top: calc(v.$separacion / 2);
+    }
+
+    .navegacion{
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    }
+
+    .copyright{
+        color: v.$blanco;
+        text-align: center;
+    }
+}

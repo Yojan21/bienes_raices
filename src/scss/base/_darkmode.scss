@@ -1,0 +1,52 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as mx;
+@use "sass:color";
+
+.dark-mode{
+    background-color: color.scale(v.$grisOscuro, $lightness: -15%);
+
+    p{
+        color: v.$blanco;
+    }
+    a,h1,h2,h3,h4{
+        color: v.$gris;
+    }
+    .anuncio,
+    .resumen_propiedad{
+        background-color: v.$grisOscuro;
+        border: 1px solid v.$grisOscuro;
+
+        .precio{
+            color: v.$verde;
+        }
+        .icono{
+            filter: invert(100%);
+        }
+    }
+
+    .texto blockquote{
+        color: v.$blanco;
+    }
+
+    .formulario{
+        label,
+        legend,
+        p{
+            color: v.$gris;
+        }
+        input:not([type="submit"]),
+        textarea,
+        select{
+            background-color: v.$grisOscuro;
+            border: 1px solid v.$grisOscuro;
+            color: v.$blanco;
+        }
+    }
+
+    table.propiedades{
+        td{
+            color: v.$blanco;
+            border: 1px solid v.$gris;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use 'base/variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+html, body {
+    height: 100%; /* Asegura que ocupen toda la pantalla */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Ocupa el espacio restante para empujar el footer abajo */
+}
+p {
+    color: v.$negro;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: v.$fuente_principal;
+    margin: calc(v.$separacion / 2) 0;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+.imagen_small{
+    width: 20rem;
+    height: 14rem;
+}
+
+.propiedades{
+    width: 100%;
+    border-collapse: collapse;
+    th, td{
+        border: 1px solid v.$grisOscuro;
+        padding: 10px;
+        text-align: center; // Centra horizontalmente
+        vertical-align: middle; // Centra verticalmente
+    }
+    img.imagen_tabla {
+        display: block;
+        max-width: 100%; // Ajusta el tamaño de la imagen
+        max-height: 100%;
+        margin: auto; // Centra horizontalmente si el display es block
+    }
+}
